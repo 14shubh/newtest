@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Signin SignUp Form */
+
+:root{
+    --white : rgb(224, 224, 224);
+    --gradient1 : #CC4929;
+    --gradient2 : #FF416C;
+    --black : #000;
+    --borderColor: #FF4B2B;
+    --bgColor : #c7c7c7;
+    --link : #1d1d1d;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+.main{
+  max-width: 40%;
+  background: var(--white);
+  margin: auto;
+  border-radius:8px ;
+  -webkit-border-radius:8px ;
+  -moz-border-radius:8px ;
+  -ms-border-radius:8px ;
+  -o-border-radius:8px ;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 50px 0;
+  
+}
+.form-box .form-group input {
+  min-width: 100%;
+  padding: 6px 10px 6px 50px;
+  outline: none;
+  background: var(--bgColor);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.btn-submit {
+  border: none;
+  padding: 5px 25px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #1d1d1d;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 10px 0 30px 5px;
+  transition: 0.4s ease-in-out;
+  border: 1px solid #1d1d1d;
+}
+.btn-submit:hover{
+  background: transparent;
+  
+  color: #1d1d1d;
+}
+
+.social-login {
+  margin-bottom: 25px;
+}
+
+.social-login a {
+  margin: 0 15px;
+  font-size: 24px;
+  color: #1d1d1d;
+}
+.form-group{
+  position: relative;
+}
+.form-group i{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#already{
+  color: var(--link);
+  font-size: 18px;
+ text-decoration: none;
+}
+#forgot{
+  color: var(--link);
+}

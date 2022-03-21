@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%-include('partials/bootstrapMetaLinks.ejs')%>
+  <link rel="stylesheet" href="stylesheets/signinstyle.css"/>
+</head>
+<body>
+    <%-include('partials/navbar.ejs')%>
+
+    <div class="container">
+        <div class="row main">
+            <div class="col-md-10 content">
+              <div class="social-login">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+      
+              <div class="form-box">
+                <form action="/sign-in" method="post">
+                  <div class="form-group">
+                      <i class="fa fa-user"  aria-hidden="true"></i>
+                    <input id="email" type="email" name="email" placeholder="Email" />
+                  </div>
+                  <div class="form-group">
+                    <i class="fa-solid fa-unlock"></i>
+                    <input id="password" type="password" name="password" placeholder="Password"
+                    />
+                  </div>
+      
+                  <button type="submit" class="btn-submit">Sign In</button>
+                </form>
+              </div>
+              <a href="#" id="already">New user ?</a>
+              <a href="#" id="forgot">forgot password </a>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

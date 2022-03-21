@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <form class="d-flex">
+        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+         
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Add items
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#add_category">Add Category</a>
+              <a class="dropdown-item" href="/admin/add-products">Add Products</a>
+          </li>
+          <% if(isLoggedIn){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/sign-out" tabindex="-1" >Sign out</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1" ><%=AdminName%></a>
+          </li>
+        <% }else{ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/sign-in" tabindex="-1" >Sign in</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/admin/sign-up" tabindex="-1" >Sign up</a>
+          </li> -->
+         <% } %>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="add_category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Categories</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/category/add-Category" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+              <label>Category Name</label>
+              <input type="text" name="categoryName" class="form-control" />
+          </div>
+          <div class="form-group">
+              <label>Category Image</label>
+              <input type="file" name="categoryImage" />
+          </div>
+          <div class="form-group ">
+              <button class="btn btn-outline-dark mr-3" data-dismiss="modal">Cancel</button>
+              <button class="btn btn-outline-dark" type="submit">Add Category</button>
+          </div>
+         
+      </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
